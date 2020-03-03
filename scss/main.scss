@@ -1,0 +1,551 @@
+// Font 
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+// Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/tooltip';
+
+
+
+// Variables
+@import 'abstracts/variables';
+
+// @mixins
+@import 'abstracts/mixins';
+
+// function
+@import 'abstracts/functions';
+
+//components Button
+@import 'components/button';
+
+//components Carousel
+@import 'components/carousel';
+
+//components footer
+@import 'components/footer';
+
+//Components Form
+@import 'components/forms';
+
+//Components gird
+@import 'components/grid';
+
+// Components Header
+@import 'components/header';
+
+//Components Icon
+@import 'components/icon';
+
+// Components Navigation 
+@import 'components/navigation';
+
+//Components Progressbar
+@import 'components/progressbar';
+
+
+// Components Sidebar
+@import 'components/sidebar';
+
+//Components slider
+@import 'components/slider';
+
+//Components Tooltip
+@import 'components/tooltip';
+
+
+
+//vendor
+@import 'vendors/bootstrap';
+
+// Base reset
+@import 'base/reset';
+
+// Base Typography
+@import 'base/typography';
+.dropdown, .dropup, .dropright, .dropleft {
+       display: inline-block;
+}
+.avatar {
+       width: 100% ;
+       height: 100%;
+       color: #fff;
+       background-color: $purple;
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+       font-size: 1rem;
+       border-radius: 50%;
+}
+.avatar-sm {
+       width: 36px;
+       height: 36px;
+       font-size: 0.875rem;
+       img {
+              width: 100%;
+              border-radius: 50%;
+          }
+}
+
+
+.title-landing{
+       width: 228px;
+       height: 30px;
+       font-family: $font;
+       font-size: $font-size;
+       font-weight: bold;
+       font-stretch: normal;
+       font-style: normal;
+       line-height: 1.2;
+       letter-spacing: normal;
+       text-align: left;
+       color: $black-1;
+}
+
+
+.img-avatar{
+       text-align: center;
+       padding: 20px;
+}
+
+
+
+
+
+
+#bg-col{
+       border-radius: $boder-radius;
+       box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.16);
+       background-color: $white;
+}
+
+.tab{
+       .row {
+              .radio{
+                     #bg-col{
+                            margin-top: 20px;
+                            width: 100%;
+                            height: auto;
+                            padding: 5.5rem !important;
+                            &.selected{
+                                   border: 4px solid $purple;
+                                   box-shadow: 0px 8px 16px 0px #EEEEEE;
+                                   -webkit-filter: grayscale(0%);
+                                   -moz-filter: grayscale(0%);
+                                   -o-filter: grayscale(0%);
+                                   -ms-filter: grayscale(0%);
+                                   filter: grayscale(0%)
+                            }
+                            p{
+                                   @include font-type(center,$font-title,$bold,normal,normal,normal,$font,1.23,$black-1);
+                            }
+                            img{
+                                   border: 0 ;
+                                   height: inherit;
+                                   
+
+                            }
+                     }
+              }
+       }
+}
+
+.info-bank{
+       justify-content: center;
+       text-align: center;
+       font-size: 15px;
+       border-left: 1px dashed $Gray;
+       margin: 2em 0;
+       .logo{
+              margin: 23px 0;
+       }
+       .info{
+              text-align: left;
+              margin: 0 auto;
+              line-height: 2.0;
+              display: flex;
+              justify-content: center;
+              ul{
+                     li{
+                            p{
+                                   @include font-type('',$font-size,'',normal,normal,normal,'',15px,$Gray-2);
+                                   display: block;
+                                   padding-top: 5px;
+                                   a{
+                                          display: initial;
+                                          padding: 0 20px;
+                                          
+                                          @include font-type(left,$font-size,normal,normal,normal,normal,$font,1.2,$black-1);
+                                          
+                                   }
+                            }
+                     }
+              }
+       }
+       
+}
+
+#pay{
+       color: #848484;
+       .title{
+              font-family: $font;            
+              font-weight: bold;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.23;
+              letter-spacing: normal;
+              text-align: left;
+              color: $Gray;
+              p{
+                     font-size: $font-title !important;
+              }
+       }
+       
+       a{
+              color: $purple;
+       }
+       .form-bank-group{
+              .title{
+
+                     p{
+                            font-family: $font;
+                            font-size: $font-size !important;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.2;
+                            letter-spacing: normal;
+                            text-align: left;
+                            color: #848484;
+                     }
+              }
+       }
+}
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: $select-color;
+  width: 100%;
+  height: $select-height;
+}
+.select-styled {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px;
+  border: solid 1px $white-1;
+  color: $black-1;
+  padding: 8px 15px;
+  @include transition(all 0.2s ease-in);
+  &:after {
+    content:"";
+    width: 0;
+    height: 0;
+    border: 7px solid black;
+    border-color: $white-1 transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+  }
+  &:active, &.active {
+    
+    &:after {
+      top: 9px;
+      border-color: transparent transparent $white-1 transparent;
+    }
+  }
+}
+
+.select-options {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: $black-1;
+  border: 1px solid $white-1;
+  li {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    background-color: $white;
+    @include transition(all 0.15s ease-in);
+    &:hover {
+      color: $purple;
+      background: $select-color;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}
+
+#upload{
+       display: flex;
+       align-items: center;
+       flex-direction: row ;
+       
+       .img-file{
+              width: 50.8px;
+              height: 59.1px;
+              display: flex;
+              margin-right: 20px;
+              align-items: center;
+              img{
+                     width: 100%;
+                     height: 100%;
+              }
+       }
+       .name-file{
+              
+              margin-top: 20px;
+              .name{
+                     color: #848484;
+                     font-size: $font-size;
+                     font-family: $font;
+                     font-weight: bold;
+                     font-stretch: normal;
+                     font-style: normal;
+                     line-height: 1.2;
+                     letter-spacing: normal;
+                     text-align: left;
+              }
+              .status{
+                     font-size: 16px;
+                     color: $purple;
+
+                     
+                     .capacity{
+                            color: #848484;
+                            margin-left: 20px;
+
+                            font-family: $font;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.19;
+                            letter-spacing: normal;
+                            text-align: left;
+                     }
+
+              }
+       }
+}
+
+
+#banner{
+       width: auto;
+       height: auto;
+       img{
+              width: 100%;
+              height: inherit;
+       }
+       
+}
+#title-ref{
+       margin-bottom: 20px;
+       font-size: 25px;
+       font-weight: bold;
+       line-height: 30px;
+       span{
+              border-bottom: 2px solid $purple ;
+              padding-bottom: 10px;
+       }
+}
+#content{
+       width: 1318px;
+       height: 98px;
+       @include font-type(left,$font-title,normal,normal,normal,normal,$font,1.23,'');
+       
+}
+#form-ref-link{
+       margin-bottom: 20px;
+       input{
+              color: $purple;
+       }
+       button{
+              background-color: $purple;
+       }
+}
+.Contact-group{
+       padding: 207px 130px 88px 2em;
+       .title-contact{
+              font-size: $font-size;
+              margin: 0 20px 20px 0;
+       }
+       @media(max-width: 769px){
+              padding: 10px 20px 20px 2em; 
+       }
+}
+
+#map{
+       width: 633px;
+       height: 311px;
+}
+
+.clean-keyword{
+       #clean{
+              @include font-type(left,$font-title,normal,normal,normal,normal,$font,1.23,'');
+              a{
+                     color: $purple;
+              }
+       }
+       #number-keyword{
+              @include font-type(left,18px,normal,normal,normal,normal,$font,1.22,$Gray-1);
+             
+       }
+}
+
+
+#support{
+       font-family: $font;
+       font-size: $font-size;
+       font-weight: normal;
+       font-stretch: normal;
+       font-style: normal;
+       line-height: 1.2;
+       letter-spacing: normal;
+       text-align: left;
+       color: $Gray-1;
+}
+.Careers-group{
+       .Careers-list{
+              justify-content: left;
+              flex-wrap: wrap;
+              
+              .Careers-item{
+                     padding: 20px 40px;
+                     font-family: $font;
+                     font-size: $font-title;
+                     font-weight: normal;
+                     font-stretch: normal;
+                     font-style: normal;
+                     line-height: 1.23;
+                     letter-spacing: normal;
+                     text-align: left;
+                     color: $Gray;
+                     a{
+                            font-family: $font;
+                            font-size: $font-title;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.23;
+                            letter-spacing: normal;
+                            text-align: left;
+                            color: $Gray;
+                     }
+              }
+       }
+
+}
+
+// profile
+#profile{
+       width: 276px;
+       height: 276px;
+       border: 2px solid $purple;
+       border-radius: 50%;
+       .avatar{
+              border: 4px solid $white;
+       }
+       input[type=file]{
+              font-size: 100px;
+              position: absolute;
+              opacity: 0;
+              bottom: -7px;
+              opacity: 0;
+              left: 240px;
+              width: 38px;
+              height: 45px;
+              font-size: 24px;
+       }
+}
+
+//info-company
+#info-company{
+       form{
+              .form-group{
+                     label{
+                            font-family: $font;
+                            font-size: $font-title;
+                            font-weight: 600;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.23;
+                            letter-spacing: normal;
+                            text-align: left;
+                            color: $black-1 ;
+                     }
+              }
+       }
+}
+#edit-avatar{
+       width: 38px;
+       height: 38px;
+       border-radius: 5px;
+       background-color: $white-1;
+       position: absolute;
+       bottom: 0;
+       right: -6px;
+}
+
+// History-group
+.history-group{
+       .history-list{
+              padding: 0;
+              .item{
+                     display:flex;
+                     justify-content: space-between;
+              }
+              #name{
+                     font-family: $font;
+                     font-size: $font-title;
+                     font-weight: normal;
+                     font-stretch: normal;
+                     font-style: normal;
+                     line-height: 1.23;
+                     letter-spacing: normal;
+                     text-align: left;
+                     color: $Gray;
+                     #date{
+                            font-family: $font;
+                            font-size: $font-title;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: italic;
+                            line-height: 1.23;
+                            letter-spacing: normal;
+                            text-align: left;
+                            color: $Gray-1;
+                     }
+              }
+              #money{
+                     font-family: $font;
+                     font-size: $font-title;
+                     font-weight: 500;
+                     font-stretch: normal;
+                     font-style: normal;
+                     line-height: 1.23;
+                     letter-spacing: normal;
+                     text-align: left;
+                     color:$purple;
+              }
+       }
+}

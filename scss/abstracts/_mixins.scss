@@ -1,0 +1,11 @@
+@mixin font-type( $align , $font-size ,$font-weight,$font-style, $font-stretch, $letter-spacing ,$font,$line-height,$color) {
+       text-align: $align;
+       font-family: $font;
+       font-size: $font-title;
+       font-weight: $font-weight;
+       font-stretch: $font-stretch;
+       font-style: $font-style;
+       line-height: $line-height;
+       letter-spacing: $letter-spacing;
+       color: $color;
+}

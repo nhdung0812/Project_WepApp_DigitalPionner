@@ -1,0 +1,135 @@
+// Flex Box
+.box{
+       display: flex;
+       width: 100%;
+       //background-color: #1a1c28;
+       height: auto;
+}
+
+.header{
+       &#header-title{
+              background-color: $white;
+       }
+       .row{
+              button{
+                     border-radius: $boder-radius;
+                     background-color:$purple;
+                     color: $white;
+                     margin-top: 18px;
+                     border: 0;
+                     width: 265px;
+                     height: 56px;
+                     font-size: $font-title;
+                   
+              }
+              .title{
+                     font-size: $font-title;
+                     color: $Gray;
+                     p{
+                            
+                            font-family: $font;
+                            font-size: 18px;
+                            font-weight: bold;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.2;
+                            letter-spacing: normal;
+                            text-align: left;
+                            color: $Gray;
+                     }
+              }
+       }
+       .tab{
+              &:not(:first-of-type){
+                     display: none;
+              }
+       }
+}
+.header .row .desc{
+       
+       font-family: $font;
+       font-size: $font-size;
+       font-weight: normal;
+       font-stretch: normal;
+       font-style: normal;
+       line-height: 1.2;
+       letter-spacing: normal;
+       text-align: center;
+       color: $black-1;
+
+       
+}
+.header{
+       .row{
+              .card{
+                     
+                     border-radius: $boder-radius;
+                     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.16);
+                     
+                     img{
+                            border-top-left-radius: $boder-radius;
+                            border-top-right-radius: $boder-radius;
+                     }
+              }
+              form{
+                     label{
+                            &#title {
+                                   font-family: $font;
+                                   font-size: 25px !important;
+                                   font-weight: bold;
+                                   font-stretch: normal;
+                                   font-style: normal;
+                                   line-height: 1.2;
+                                   letter-spacing: normal;
+                                   text-align: left;
+                                   margin-bottom:16px !important ;
+                                   color: $black-1;
+                            }
+                     }
+                     .form-group{
+                            margin-bottom: 30px;
+                            .col-form-label{
+                                   font-size: $font-title;
+                            }
+                            &#authen{
+                                   label{
+                                          font-family: $font;
+                                          font-size: $font-title;
+                                          font-weight: 600;
+                                          font-stretch: normal;
+                                          font-style: normal;
+                                          line-height: 1.23;
+                                          letter-spacing: normal;
+                                          text-align: left;
+                                          color: $black-1 !important;
+                                   }
+                            }
+                     }
+              }
+       }
+}
+.header{
+       .tab{
+              .titile{
+                     font-size: $font-title;
+                     font-family: $font;
+                     font-weight: normal;
+                     font-stretch: normal;
+                     font-style: normal;
+                     line-height: 1.23;
+                     letter-spacing: normal;
+                     text-align: left;
+                     color: $Gray;
+
+                     form{
+                            .col-form-label{
+                                   font-size: $font-title;
+                            }
+                            span{
+                                   font-size: $font-title;
+                                   color: $Gray;
+                            }
+                     }
+              }
+       }
+}
